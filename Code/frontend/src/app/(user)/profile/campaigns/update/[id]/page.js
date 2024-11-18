@@ -29,7 +29,7 @@ const UpdateCampaign = () => {
     setLoading(true);
 
     try {
-      const response = await axios.put(`/campaigns/update/${id}`, {
+      await axios.put(`/campaigns/update/${id}`, {
         title: campaign.title,
         description: campaign.description,
         goalAmount: campaign.goalAmount,
@@ -55,6 +55,7 @@ const UpdateCampaign = () => {
         Update Campaign
       </h2>
       <form onSubmit={handleUpdate} className="space-y-4">
+        {/* Title Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Title
@@ -69,6 +70,8 @@ const UpdateCampaign = () => {
             className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg"
           />
         </div>
+
+        {/* Description Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Description
@@ -82,6 +85,8 @@ const UpdateCampaign = () => {
             className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg h-28 resize-none"
           ></textarea>
         </div>
+
+        {/* Goal Amount Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Goal Amount (₹)
@@ -97,6 +102,8 @@ const UpdateCampaign = () => {
             className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg"
           />
         </div>
+
+        {/* Image URL Input */}
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Image URL
@@ -116,6 +123,8 @@ const UpdateCampaign = () => {
             className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg"
           />
         </div>
+
+        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-green-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300"
