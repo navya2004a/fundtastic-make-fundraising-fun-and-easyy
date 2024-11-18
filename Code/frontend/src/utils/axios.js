@@ -1,4 +1,4 @@
-// axios.ts
+// axios.js
 import Axios from "axios";
 
 // Create an Axios instance with the base URL and withCredentials
